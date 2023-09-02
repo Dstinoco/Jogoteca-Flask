@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+        <table class="mb-3 table table-striped table-responsive table-bordered text-center">
+            <thead class="thead-default table-dark ">
+                <tr>
+                    <th>Nome</th>
+                    <th>Categoria</th>
+                    <th>Console</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in jogos %}
+                <tr>
+                    <td>{{ i.nome }}</td>
+                    <td>{{ i.categoria }}</td>
+                    <td>{{ i.console }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+   {% endblock %}
